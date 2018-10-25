@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, identity } from 'rxjs';
 
 import { User } from './user.class';
 import { JsonResp } from '../json-resp.class';

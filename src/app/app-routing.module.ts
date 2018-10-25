@@ -1,3 +1,4 @@
+import { UserRemoveComponent } from './users/user-remove/user-remove.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserListComponent } from './users/user-list/user-list.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'users/create', component:  UserCreateComponent },
   { path: 'users/detail/:id', component:  UserDetailComponent },
   { path: 'users/edit/:id', component:  UserEditComponent },
+  { path: 'users/remove/:id', component: UserRemoveComponent },
   { path: '**', component: UserListComponent }
 ];
 

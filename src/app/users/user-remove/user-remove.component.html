@@ -1,0 +1,12 @@
+<div class="component">
+  <header>
+    <span class="page-title">User Remove</span>
+    <span> | <a routerLink='/users/list'>Back to list</a></span>
+  </header>
+  <div class="container" *ngIf="user">
+    Are you sure that {{user.FirstName}} {{user.LastName}} can be deleted?
+  </div>
+  <div>
+    <button class="btn btn-primary" (click)="delete()">Delete</button>
+  </div>
+</div>
