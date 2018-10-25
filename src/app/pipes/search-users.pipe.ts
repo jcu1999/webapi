@@ -10,13 +10,13 @@ export class SearchUsersPipe implements PipeTransform {
     if (searchCriteria === '') {
       return users;
     }
-    let searchedUsers: User[] = [];
-    for (let user of users) {
-      if (user.UserName.includes(searchCriteria) ||
-        user.FirstName.includes(searchCriteria) ||
-        user.LastName.includes(searchCriteria) ||
-        user.Phone.includes(searchCriteria) ||
-        user.Email.includes(searchCriteria)) {
+    const searchedUsers: User[] = [];
+    for (const user of users) {
+      if (user.UserName.toUpperCase().includes(searchCriteria.toUpperCase()) ||
+        user.FirstName.toUpperCase().includes(searchCriteria.toUpperCase()) ||
+        user.LastName.toUpperCase().includes(searchCriteria.toUpperCase()) ||
+        user.Phone.toUpperCase().includes(searchCriteria.toUpperCase()) ||
+        user.Email.toUpperCase().includes(searchCriteria.toUpperCase())) {
         searchedUsers.push(user);
       }
     }

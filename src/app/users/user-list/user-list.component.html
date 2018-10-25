@@ -2,7 +2,7 @@
   <header>
     <span class="page-title">User List</span>
     <span> | <a routerLink='/users/create'>Create New</a></span>
-    <span> | <input [(ngModel)]='searchCriteria' type='text'></span>
+    <span> <br/>Search: <input [(ngModel)]='searchCriteria' type='text'></span>
   </header>
   <table class="table table-sm" *ngIf="users">
     <thead>
