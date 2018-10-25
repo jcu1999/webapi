@@ -12,6 +12,8 @@ import { JsonResp } from '../../json-resp.class';
 export class UserListComponent implements OnInit {
 
   users: User[];
+  searchCriteria = '';
+  sortBy = "LastName";
 
   constructor(private usersvc: UserService) { }
 

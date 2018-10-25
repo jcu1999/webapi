@@ -15,13 +15,10 @@ export class SortUsersPipe implements PipeTransform {
     return users.sort(compareFn);
 
     function compareFn(a: User, b: User): number {
-      const x = a[sortProperty].toUpperCase();
-      const y = b[sortProperty].toUpperCase();
-      
-      if (x === y) {
+      if (a[sortProperty] === b[sortProperty]) {
         return 0;
       }
-      return (x > y) ? 1 : -1;
+      return (a[sortProperty] > b[sortProperty]) ? 1 : -1;
     }
   }
 }
