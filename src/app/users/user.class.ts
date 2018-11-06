@@ -1,5 +1,7 @@
+import { UUID } from 'angular2-uuid';
+
 export class User {
-    Id: number;
+    Id: string;
     UserName: string;
     Password: string;
     FirstName: string;
@@ -10,7 +12,7 @@ export class User {
     IsAdmin: boolean;
 
     constructor() {
-        this.Id = 0;
+        this.Id = UUID.UUID();
         this.IsReviewer = false;
         this.IsAdmin = false;
     }
